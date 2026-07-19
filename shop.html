@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | NorooZ ToyZ</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#3B5674;
+color:white;
+}
+
+header{
+background:#3B5674;
+padding:10px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:3px solid orange;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+font-size:22px;
+font-weight:bold;
+}
+
+.logo img{
+width:60px;
+height:60px;
+object-fit:contain;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:orange;
+}
+
+.shop-header{
+text-align:center;
+padding:60px 20px 30px;
+}
+
+.shop-header h1{
+font-size:48px;
+color:orange;
+margin-bottom:15px;
+}
+
+.shop-header p{
+font-size:20px;
+color:#d8d8d8;
+}
+
+.category-grid{
+max-width:1200px;
+margin:40px auto 80px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:0 25px;
+}
+
+.category-card{
+background:#4A6787;
+border-radius:18px;
+padding:35px 20px;
+text-align:center;
+transition:.3s;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.category-card:hover{
+transform:translateY(-8px);
+background:#56779A;
+}
+
+.category-card a{
+text-decoration:none;
+color:white;
+display:block;
+}
+
+.category-card .icon{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.category-card h2{
+font-size:26px;
+margin-bottom:10px;
+}
+
+.category-card p{
+font-size:16px;
+color:#dddddd;
+line-height:1.6;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+margin:8px;
+}
+
+.shop-header h1{
+font-size:34px;
+}
+
+.shop-header p{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="images/norooztoyzlogo.png" alt="NorooZ ToyZ Logo">
+<span>NOROOZ TOYZ</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+</nav>
+
+</header>
+
+<section class="shop-header">
+
+<h1>Shop Collections</h1>
+
+<p>Select your favorite collection below.</p>
+
+</section>
+
+<section class="category-grid">
+
+<div class="category-card">
+<a href="funko.html">
+<div class="icon">🧸</div>
+<h2>Funko Pop</h2>
+<p>Browse our growing collection of authentic Funko Pop figures.</p>
+</a>
+</div>
+
+<div class="category-card">
+<a href="hotwheels.html">
+<div class="icon">🚗</div>
+<h2>Hot Wheels</h2>
+<p>Die-cast collectibles for every Hot Wheels enthusiast.</p>
+</a>
+</div>
+
+<div class="category-card">
+<a href="anime.html">
+<div class="icon">🎌</div>
+<h2>Anime Figures</h2>
+<p>Popular anime characters and collectible figures.</p>
+</a>
+</div>
+
+<div class="category-card">
+<a href="marvel.html">
+<div class="icon">🦸</div>
+<h2>Marvel</h2>
+<p>Marvel heroes, villains and limited collectibles.</p>
+</a>
+</div>
+
+<div class="category-card">
+<a href="dc.html">
+<div class="icon">🦇</div>
+<h2>DC</h2>
+<p>Batman, Superman and your favorite DC characters.</p>
+</a>
+</div>
+
+<div class="category-card">
+<a href="electronics.html">
+<div class="icon">📱</div>
+<h2>Electronics</h2>
+<p>Affordable gadgets and accessories.</p>
+</a>
+</div>
+
+<div class="category-card">
+<a href="anikanik.html">
+<div class="icon">🎨</div>
+<h2>Anik-Anik</h2>
+<p>Unique finds, collectibles and lifestyle items.</p>
+</a>
+</div>
+
+</section>
+
+<footer>
+
+© 2021 NorooZ ToyZ
+
+</footer>
+
+</body>
+</html>
