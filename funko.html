@@ -71,7 +71,7 @@
             max-width: 1200px;
             margin: 50px auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             padding: 0 25px;
         }
@@ -135,13 +135,20 @@
             border-radius: 20px;
             font-size: 14px;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        /* Shopee Button Style */
-        .buy-button {
+        /* Checkout Button Container */
+        .checkout-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        /* Standard Checkout Buttons */
+        .buy-button, .lazada-button {
             display: block;
-            background: #ee4d2d; /* Shopee Orange */
             color: white;
             text-decoration: none;
             padding: 12px;
@@ -149,12 +156,40 @@
             font-weight: bold;
             transition: 0.3s;
             font-size: 14px;
-            margin-top: auto;
         }
 
-        .buy-button:hover {
-            background: #ff5722;
-            box-shadow: 0 5px 15px rgba(238, 77, 45, 0.4);
+        .buy-button { background: #ee4d2d; }
+        .buy-button:hover { background: #ff5722; box-shadow: 0 5px 15px rgba(238, 77, 45, 0.4); }
+
+        .lazada-button { background: #005af0; }
+        .lazada-button:hover { background: #0045b5; box-shadow: 0 5px 15px rgba(0, 90, 240, 0.4); }
+
+        /* Facebook Messenger Button Style */
+        .fb-button {
+            display: block;
+            background: #1877F2;
+            color: white;
+            text-decoration: none;
+            padding: 15px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 13px;
+            border: 2px solid #FFD700;
+            line-height: 1.2;
+        }
+
+        .fb-button:hover {
+            background: #145dbf;
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.5);
+        }
+
+        .promo-text {
+            display: block;
+            font-size: 24px;
+            color: #FFD700;
+            margin-top: 5px;
         }
 
         footer {
@@ -165,24 +200,11 @@
         }
 
         @media(max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 15px;
-            }
-            nav a {
-                margin: 8px;
-            }
-            .hero h1 {
-                font-size: 34px;
-            }
-            .hero p {
-                font-size: 18px;
-            }
+            header { flex-direction: column; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 15px; }
+            nav a { margin: 8px; }
+            .hero h1 { font-size: 34px; }
+            .hero p { font-size: 18px; }
         }
     </style>
 </head>
@@ -216,9 +238,14 @@
                 <h2>X-23</h2>
                 <div class="price">P599.00</div>
                 <div class="status">AVAILABLE NOW</div>
-                <a href="https://s.shopee.ph/2BDR36OUCZ" class="buy-button" target="_blank">
-                    SHOPEE CHECKOUT
-                </a>
+                <div class="checkout-options">
+                    <a href="https://s.shopee.ph/2BDR36OUCZ" class="buy-button" target="_blank">SHOPEE CHECKOUT</a>
+                    <a href="#" class="lazada-button" target="_blank">LAZADA CHECKOUT</a>
+                    <a href="https://m.me/norooz.toyz" class="fb-button" target="_blank">
+                        DIRECT FB MESSAGE
+                        <span class="promo-text">P349 ONLY</span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -231,9 +258,14 @@
                 <h2>Old Man Logan</h2>
                 <div class="price">P449.00</div>
                 <div class="status">AVAILABLE NOW</div>
-                <a href="#" class="buy-button" target="_blank">
-                    SHOPEE CHECKOUT
-                </a>
+                <div class="checkout-options">
+                    <a href="#" class="buy-button" target="_blank">SHOPEE CHECKOUT</a>
+                    <a href="#" class="lazada-button" target="_blank">LAZADA CHECKOUT</a>
+                    <a href="https://m.me/norooz.toyz" class="fb-button" target="_blank">
+                        DIRECT FB MESSAGE
+                        <span class="promo-text">P349 ONLY</span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -246,16 +278,21 @@
                 <h2>Wolverine</h2>
                 <div class="price">P449.00</div>
                 <div class="status">AVAILABLE NOW</div>
-                <a href="#" class="buy-button" target="_blank">
-                    SHOPEE CHECKOUT
-                </a>
+                <div class="checkout-options">
+                    <a href="#" class="buy-button" target="_blank">SHOPEE CHECKOUT</a>
+                    <a href="#" class="lazada-button" target="_blank">LAZADA CHECKOUT</a>
+                    <a href="https://m.me/norooz.toyz" class="fb-button" target="_blank">
+                        DIRECT FB MESSAGE
+                        <span class="promo-text">P349 ONLY</span>
+                    </a>
+                </div>
             </div>
         </div>
 
     </section>
 
     <footer>
-        © 2021 NorooZ ToyZ
+        © 2024 NorooZ ToyZ
     </footer>
 
 </body>
