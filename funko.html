@@ -109,19 +109,23 @@ transform:translateY(-8px);
 }
 
 .product-image{
-
-height:260px;
-
-background:#607D9B;
-
+height:280px;
+background:white;
 display:flex;
-
 justify-content:center;
-
 align-items:center;
+overflow:hidden;
+}
 
-font-size:90px;
+.product-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.3s;
+}
 
+.product-card:hover .product-image img{
+transform:scale(1.05);
 }
 
 .product-info{
@@ -261,18 +265,16 @@ font-size:18px;
 <div class="product-card">
 
 <div class="product-image">
-
-🧸
-
+<img src="images/x23.jpg" alt="Funko Pop X-23">
 </div>
 
 <div class="product-info">
 
-<h2>Coming Soon</h2>
+<h2>X-23</h2>
 
-<div class="price">TBA</div>
+<div class="price">P449.00</div>
 
-<div class="status">COMING SOON</div>
+<div class="status">AVAILABLE NOW</div>
 
 </div>
 
@@ -281,18 +283,16 @@ font-size:18px;
 <div class="product-card">
 
 <div class="product-image">
-
-🧸
-
+<img src="images/oldmanlogan.jpg" alt="Funko Pop Old Man Logan">
 </div>
 
 <div class="product-info">
 
-<h2>Coming Soon</h2>
+<h2>Old Man Logan</h2>
 
-<div class="price">TBA</div>
+<div class="price">P449.00</div>
 
-<div class="status">COMING SOON</div>
+<div class="status">AVAILABLE NOW</div>
 
 </div>
 
@@ -301,18 +301,16 @@ font-size:18px;
 <div class="product-card">
 
 <div class="product-image">
-
-🧸
-
+<img src="images/wolverine.jpg" alt="Funko Pop Wolverine">
 </div>
 
 <div class="product-info">
 
-<h2>Coming Soon</h2>
+<h2>Wolverine</h2>
 
-<div class="price">TBA</div>
+<div class="price">P449.00</div>
 
-<div class="status">COMING SOON</div>
+<div class="status">AVAILABLE NOW</div>
 
 </div>
 
