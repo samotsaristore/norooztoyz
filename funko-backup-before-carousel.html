@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funko Pop | NorooZ ToyZ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #3B5674;
+            color: white;
+        }
+
+        header {
+            background: #3B5674;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid orange;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: orange;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #dddddd;
+        }
+
+@media(max-width: 768px) {
+    
+        .product-grid {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 25px;
+        }
+
+        .product-card {
+            background: #4A6787;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+            transition: .3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-image {
+            height: 320px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .3s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .product-info h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .product-meta {
+    color:#dddddd;
+    font-size:14px;
+    margin-bottom:12px;
+    line-height:1.5;
+}
+
+        .price {
+            color: orange;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #28a745;
+            color: white
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Checkout Button Container */
+        .checkout-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        /* Standard Checkout Buttons */
+        .buy-button, .lazada-button {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .buy-button { background: #ee4d2d; }
+        .buy-button:hover { background: #ff5722; box-shadow: 0 5px 15px rgba(238, 77, 45, 0.4); }
+
+        .lazada-button { background: #005af0; }
+        .lazada-button:hover { background: #0045b5; box-shadow: 0 5px 15px rgba(0, 90, 240, 0.4); }
+
+        /* Facebook Messenger Button Style - ENHANCED */
+        .fb-button {
+            display: block;
+            background: #1877F2;
+            color: white;
+            text-decoration: none;
+            padding: 15px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 13px;
+            border: 2px solid #FFD700;
+            line-height: 1.2;
+        }
+
+        .fb-button:hover {
+            background: #145dbf;
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.5);
+        }
+
+        .promo-text {
+            display: block;
+            font-size: 24px;
+            color: #FFD700;
+            margin-top: 5px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            text-align: center;
+            background: #111;
+        }
+
+        @media(max-width: 768px) {
+            header { flex-direction: column; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 15px; }
+            nav a { margin: 8px; }
+            .hero h1 { font-size: 34px; }
+            .hero p { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/norooztoyzlogo.png" alt="NorooZ ToyZ">
+            <span>NOROOZ TOYZ</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="funko.html">Funko Pop</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Funko Pop Collection</h1>
+        <p>Browse our available Funko Pop collectibles.</p>
+    </section>
+
+    <section class="product-grid">
+
+        <!-- X-23 Card -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/x23.jpg" alt="Funko Pop X-23">
+            </div>
+            <div class="product-info">
+                <h2>X-23</h2>
+                <div class="price">P599.00</div>
+                <div class="status">AVAILABLE NOW</div>
+                <div class="checkout-options">
+                    <a href="https://s.shopee.ph/2BDR36OUCZ" class="buy-button" target="_blank">SHOPEE CHECKOUT</a>
+                    <a href="https://s.lazada.com.ph/s.Z6aNjC" class="lazada-button" target="_blank">LAZADA CHECKOUT</a>
+                    <!-- ref=x23 added to link -->
+                    <a href="https://m.me/norooz.toyz?ref=x23" class="fb-button" target="_blank">
+                        FB DIRECT BUY
+                        <span class="promo-text">P349 ONLY</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Old Man Logan Card -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/oldmanlogan.jpg" alt="Funko Pop Old Man Logan">
+            </div>
+            <div class="product-info">
+                <h2>Old Man Logan</h2>
+                <div class="price">P599.00</div>
+                <div class="status">AVAILABLE NOW</div>
+                <div class="checkout-options">
+                    <a href="#" class="buy-button" target="_blank">SHOPEE CHECKOUT</a>
+                    <a href="#" class="lazada-button" target="_blank">LAZADA CHECKOUT</a>
+                    <!-- ref=logan added to link -->
+                    <a href="https://m.me/norooz.toyz?ref=logan" class="fb-button" target="_blank">
+                        FBI DIRECT BUY
+                        <span class="promo-text">P349 ONLY</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wolverine Card -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/wolverine.jpg" alt="Funko Pop Wolverine">
+            </div>
+            <div class="product-info">
+                <h2>Wolverine</h2>
+                <div class="price">P599.00</div>
+                <div class="status">AVAILABLE NOW</div>
+                <div class="checkout-options">
+                    <a href="#" class="buy-button" target="_blank">SHOPEE CHECKOUT</a>
+                    <a href="#" class="lazada-button" target="_blank">LAZADA CHECKOUT</a>
+                    <!-- ref=wolverine added to link -->
+                    <a href="https://m.me/norooz.toyz?ref=wolverine" class="fb-button" target="_blank">
+                        FB DIRECT BUY
+                        <span class="promo-text">P349 ONLY</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 NorooZ ToyZ
+    </footer>
+
+</body>
+</html>
