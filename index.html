@@ -1,216 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norooz Toyz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+<title>Norooz Toyz</title>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<style>
 
-        body{
-            background:#3B5674;
-            color:white;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        header{
+body{
+    background:#3B5674;
+    color:white;
+}
 
-            background:#3B5674;
+header{
+    background:#3B5674;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:3px solid orange;
+}
 
-            padding:10px 20px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
 
-            display:flex;
-
-            justify-content:space-between;
-
-            align-items:center;
-
-            border-bottom:3px solid orange;
-
-        }
-
-        .logo{
-            display:flex;
-
-            align-items:center;
-
-            gap:15px;
-
-            color:white;
-
-            font-size:22px;
-
-            font-weight:bold;
-
-        }
-
-        nav a{
-
-            color:white;
-
-            text-decoration:none;
-
-            margin-left:25px;
-
-            transition:.3s;
-
-        }
-
-        nav a:hover{
-
-            color:orange;
-
-        }
-
-        .hero{
-
-            text-align:center;
-
-            padding:20px 20px 20px;
-
-        }
-
-        .hero h1{
-
-            font-size:60px;
-
-            color:orange;
-
-        }
-
-        .hero p{
-
-            margin-top:20px;
-
-            font-size:22px;
-
-            color:#cccccc;
-
-        }
-
-        .button{
-
-            display:inline-block;
-
-            margin-top:40px;
-
-            background:orange;
-
-            color:black;
-
-            text-decoration:none;
-
-            padding:15px 40px;
-
-            border-radius:8px;
-
-            font-weight:bold;
-
-        }
-
-        footer{
-
-            text-align:center;
-
-            padding:30px;
-
-            background:#111;
-
-            margin-top:100px;
-
-            border-top:1px solid #333;
-
-        }
 .logo img{
-
     width:60px !important;
-
     height:60px !important;
-
     object-fit:contain;
-
-}
-/* ===== SHOP BY CATEGORY ===== */
-
-#shop{
-
-padding:80px 40px;
-
-text-align:center;
-
 }
 
-#shop h2{
-
-color:white;
-
-font-size:42px;
-
-margin-bottom:40px;
-
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
 }
 
-.category-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:25px;
-
-max-width:1100px;
-
-margin:0 auto;
-
+nav a:hover{
+    color:orange;
 }
 
-.category-card{
-
-background:#4A6787;
-
-padding:30px;
-
-border-radius:15px;
-
+.hero{
+    text-align:center;
+    padding:20px;
 }
 
-.category-card a{
-
-display:block;
-
-text-decoration:none;
-
-color:white;
-
-font-size:24px;
-
-font-weight:bold;
-
+.hero h1{
+    font-size:60px;
+    color:orange;
 }
 
-.contact-link{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
-
+.hero p{
+    margin-top:20px;
+    font-size:22px;
+    color:#cccccc;
 }
 
-.contact-link:hover{
-
-color:orange;
-
+.button{
+    display:inline-block;
+    margin-top:40px;
+    background:orange;
+    color:black;
+    text-decoration:none;
+    padding:15px 40px;
+    border-radius:8px;
+    font-weight:bold;
 }
 
-/* ===== ABOUT ===== */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111;
+    margin-top:100px;
+    border-top:1px solid #333;
+}
+
+
+/* ABOUT */
 
 #about{
 
@@ -244,9 +125,8 @@ line-height:1.8;
 
 }
 
-/* ===========================
-   MOBILE RESPONSIVE
-=========================== */
+
+/* MOBILE */
 
 @media (max-width:768px){
 
@@ -318,30 +198,19 @@ font-size:18px;
 
 width:260px;
 
-display:inline-block;
-
 text-align:center;
 
 }
 
-#shop h2{
-
-font-size:36px;
-
 }
 
-.category-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-    </style>
+</style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -352,6 +221,7 @@ grid-template-columns:1fr;
 <span>NOROOZ TOYZ</span>
 
 </div>
+
 
 <nav>
 
@@ -371,62 +241,31 @@ grid-template-columns:1fr;
 
 </nav>
 
+
 </header>
+
+
 
 <section class="hero">
 
 <h1>Welcome to Norooz Toyz</h1>
 
-<p>Your One-Stop Shop for Affordable Toys, Electronic Gadgets, Apparels, and More.
+<p>
+Your One-Stop Shop for Affordable Toys, Electronic Gadgets, Apparels, and More.
 </p>
 
 <a class="button" href="#">COMING SOON</a>
 
 </section>
 
-<section id="shop">
 
-<h2>SHOP BY CATEGORY</h2>
-
-<div class="category-grid">
-
-<div class="category-card">
-<a href="#funko">🧸<br>Funko Pop</a>
-</div>
-
-<div class="category-card">
-<a href="#hotwheels">🚗<br>Hot Wheels</a>
-</div>
-
-<div class="category-card">
-<a href="#anime">🎌<br>Anime Figures</a>
-</div>
-
-<div class="category-card">
-<a href="#marvel">🦸<br>Marvel</a>
-</div>
-
-<div class="category-card">
-<a href="#dc">🦇<br>DC</a>
-</div>
-
-<div class="category-card">
-<a href="#electronics">📱<br>Electronics</a>
-</div>
-
-<div class="category-card">
-<a href="#anik-anik">🎨<br>Anik-anik</a>
-</div>
-
-</div>
-
-</section>
 
 <footer>
 
 © 2026 Norooz Toyz
 
 </footer>
+
 
 </body>
 
