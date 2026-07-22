@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Funko Pop | Norooz Toyz</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+    background:#f5f5f5;
+    color:#333;
+
+}
+
+
+/* HEADER */
+
+header{
+
+    background:#3B5674;
+    padding:10px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:3px solid orange;
+
+}
+
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+.logo img{
+
+    width:60px;
+    height:60px;
+
+    object-fit:contain;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:20px;
+
+}
+
+
+nav a:hover{
+
+    color:orange;
+
+}
+
+
+/* SEARCH STYLE */
+
+.search-bar{
+
+    background:white;
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+
+.search-box{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:#eee;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    color:#777;
+
+}
+
+
+
+/* HERO */
+
+.hero{
+
+    background:#3B5674;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+
+.hero h1{
+
+    color:orange;
+
+    font-size:42px;
+
+}
+
+
+.hero p{
+
+    margin-top:10px;
+
+}
+
+
+
+/* PRODUCT AREA */
+
+.product-section{
+
+    padding:30px 20px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+.section-title{
+
+    font-size:28px;
+
+    color:#3B5674;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* SHOPEE STYLE PRODUCT ROW */
+
+.product-grid{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+
+    padding-bottom:15px;
+
+}
+
+
+.product-grid::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+
+.product-card{
+
+    min-width:280px;
+
+    background:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 3px 10px rgba(0,0,0,.15);
+
+}
+
+.product-image{
+
+    height:300px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* FIXED: Changed width/height to auto to stop picture compression/stretching */
+.product-image img{
+
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit:contain;
+
+}
+
+
+
+.product-info{
+
+    padding:15px;
+
+    text-align:center;
+
+}
+
+
+
+.product-name{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.status{
+
+    display:inline-block;
+
+    background:#28a745;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.price{
+
+    color:#ee4d2d;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+
+
+.direct-buy{
+
+    color:#3B5674;
+
+    font-weight:bold;
+
+    margin:10px 0;
+
+}
+
+
+
+/* BUTTONS */
+
+.buttons a{
+
+    display:block;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    border-radius:6px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.shopee{
+
+    background:#ee4d2d;
+
+}
+
+
+.lazada{
+
+    background:#005af0;
+
+}
+
+
+.facebook{
+
+    background:#1877F2;
+
+    border:2px solid #FFD700;
+
+}
+
+
+
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+    margin-top:50px;
+
+}
+
+
+
+
+/* MOBILE SHOPEE STYLE */
+
+@media(max-width:768px){
+
+
+header{
+
+    flex-direction:column;
+
+}
+
+
+nav{
+
+    margin-top:15px;
+
+}
+
+
+nav a{
+
+    margin:8px;
+
+}
+
+
+.product-card{
+
+    min-width:85%;
+
+}
+
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+
+
+}
+
+
+/* AI MODAL POP-UP STYLE */
+.modal-overlay {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.75); 
+    z-index: 1000; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.modal-content {
+    background: white; 
+    color: #333; 
+    padding: 25px; 
+    border-radius: 12px; 
+    max-width: 450px; 
+    width: 90%; 
+    position: relative; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+    text-align: left;
+}
+
+.modal-close {
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 28px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    color: #777;
+    transition: 0.2s;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+
+<img src="images/norooztoyzlogo.png" alt="Norooz Toyz">
+
+<span>NOROOZ TOYZ</span>
+
+</div>
+
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="shop.html">Shop</a>
+
+<a href="funko.html">Funko Pop</a>
+
+</nav>
+
+
+</header>
+
+
+<section class="search-bar">
+
+<div class="search-box">
+
+🔍 Search Funko Pop Collection
+
+</div>
+
+</section>
+
+
+
+<section class="hero">
+
+<h1>Funko Pop Collection</h1>
+
+<p>Browse our available Funko Pop collectibles.</p>
+
+</section>
+
+
+
+<section class="product-section">
+
+
+<h2 class="section-title">
+
+Featured Funko Pop
+
+</h2>
+
+
+<div class="product-grid">
+
+
+<!-- X-23 CARD (FIXED NAME) -->
+<div class="product-card">
+
+<div class="product-image">
+
+<img src="images/x23.jpg" alt="Funko Pop X-23" onclick="openX23Modal()" style="cursor: pointer; transition: 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+
+</div>
+
+
+<div class="product-info">
+
+<!-- FIXED: Removed #1497 from the layout heading here -->
+<div class="product-name">
+
+X-23
+
+</div>
+
+
+<div class="status">
+
+AVAILABLE NOW
+
+</div>
+
+
+<div class="price">
+
+₱599
+
+</div>
+
+
+<div class="direct-buy">
+
+FB Direct Buy ₱349
+
+</div>
+
+
+<div class="buttons">
+
+
+<a class="shopee"
+href="https://shopee.ph"
+target="_blank">
+
+🛒 SHOPEE
+
+</a>
+
+
+<a class="lazada"
+href="https://lazada.com.ph"
+target="_blank">
+
+🛍 LAZADA
+
+</a>
+
+
+<a class="facebook"
+href="https://m.me"
+target="_blank">
+
+📘 FACEBOOK BUY
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- OLD MAN LOGAN CARD -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img src="images/oldmanlogan.jpg" alt="Funko Pop Old Man Logan">
+
+</div>
+
+
+<div class="product-info">
+
+<div class="product-name">
+
+Old Man Logan
+
+</div>
+
+
+<div class="status">
+
+AVAILABLE NOW
+
+</div>
+
+
+<div class="price">
+
+₱599
+
+</div>
+
+
+<div class="direct-buy">
+
+FB Direct Buy ₱349
+
+</div>
+
+
+<div class="buttons">
+
+
+<a class="shopee"
+href="https://shopee.ph"
+target="_blank">
+
+🛒 SHOPEE
+
+</a>
+
+
+<a class="lazada"
+href="https://lazada.com.ph"
+target="_blank">
+
+🛍 LAZADA
+
+</a>
+
+
+<a class="facebook"
+href="https://m.me"
+target="_blank">
+
+📘 FACEBOOK BUY
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<!-- WOLVERINE CARD -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img src="images/wolverine.jpg" alt="Funko Pop Wolverine">
+
+</div>
+
+
+<div class="product-info">
+
+<div class="product-name">
+
+Wolverine
+
+</div>
+
+
+<div class="status">
+
+AVAILABLE NOW
+
+</div>
+
+
+<div class="price">
+
+₱599
+
+</div>
+
+
+<div class="direct-buy">
+
+FB Direct Buy ₱349
+
+</div>
+
+
+<div class="buttons">
+
+
+<a class="shopee"
+href="https://shopee.ph"
+target="_blank">
+
+🛒 SHOPEE
+
+</a>
+
+
+<a class="lazada"
+href="https://lazada.com.ph"
+target="_blank">
+
+🛍 LAZADA
+
+</a>
+
+
+<a class="facebook"
+href="https://m.me"
+target="_blank">
+
+📘 FACEBOOK BUY
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+<!-- POP-UP BOX FOR X-23 -->
+<div id="x23PopUp" class="modal-overlay">
+    <div class="modal-content">
+        <span onclick="closeX23Modal()" class="modal-close">&times;</span>
+        <h3 style="color:#3B5674; margin-bottom:12px; font-size:24px; border-bottom: 2px solid orange; padding-bottom: 5px;">Funko Pop! X-23</h3>
+        
+        <p style="font-size:14px; color:#555; background: #fff3cd; border: 1px solid #ffeeba; padding: 10px; border-radius: 6px; margin-bottom: 15px; font-weight: bold;">
+            ⚠️ Please see video clip for the price & condition.
+        </p>
+
+        <p style="font-size:15px; line-height:1.6; color:#444; margin-bottom:15px;">
+            X-23 is one of those characters that quickly gained a dedicated fanbase due to her unique backstory and deep connection to Wolverine. For Marvel collectors, she is an instantly recognizable character that stands out on any shelf display.
+        </p>
+
+        <div style="font-size:14px; color:#555; background: #eee; padding: 12px; border-radius: 6px; margin-bottom: 15px; line-height: 1.6;">
+            <!-- FIXED: Placed Funko Number here inside the details description list -->
+            • Funko Number: #1497<br>
+            • Stylized Funko Pop collectible<br>
+            • Fan-favorite Marvel character<br>
+            • Great addition to any X-Men or Wolverine-related collection<br>
+            <strong>• Box Condition:</strong> 8/10
+        </div>
+
+        <p style="font-size:15px; text-align: center; font-weight: bold;">
+            📩 <a href="https://m.me" target="_blank" style="color: #1877F2; text-decoration: none; border-bottom: 1px dashed #1877F2;">Please PM/DM us if interested.</a>
+        </p>
+    </div>
+</div>
+
+
+<footer>
+
+© 2026 Norooz Toyz
+
+</footer>
+
+
+<!-- INTERACTION PAGES LOGIC -->
+<script>
+function openX23Modal() {
+    document.getElementById("x23PopUp").style.display = "flex";
+}
+
+function closeX23Modal() {
+    document.getElementById("x23PopUp").style.display = "none";
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById("x23PopUp");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+</body>
+
+</html>
