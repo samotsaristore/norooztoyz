@@ -670,7 +670,7 @@ let clickFunction = "";
 
 if(product.modal) {
 
-    clickFunction = `openModal('${product.modal}PopUp')`;
+    clickFunction = `openDynamicPopup('${product.id}')`;
 
 }
 
@@ -791,7 +791,109 @@ document.getElementById(id).style.display = "flex";
 
 }
 
+function openDynamicPopup(id) {
 
+let product = funkoProducts.find(item => item.id === id);
+
+if(!product) return;
+
+let existingPopup = document.getElementById(id + "DynamicPopUp");
+
+if(existingPopup){
+
+existingPopup.style.display = "flex";
+
+return;
+
+}
+
+let popup = document.createElement("div");
+
+popup.id = id + "DynamicPopUp";
+
+popup.className = "modal-overlay";
+
+popup.innerHTML = generatePopup(product);
+
+document.body.appendChild(popup);
+
+popup.style.display = "flex";
+
+}
+
+function generatePopup(product) {
+
+if(!product.popup) return "";
+
+let details = "";
+
+product.popup.details.forEach(item => {
+
+details += `• ${item}<br>`;
+
+});
+
+
+return `
+
+<div class="modal-content">
+
+<span onclick="closeModal('${product.id}DynamicPopUp')" class="modal-close">
+
+&times;
+
+</span>
+
+
+<h3 style="color:#3B5674; margin-bottom:12px; font-size:24px; border-bottom:2px solid orange; padding-bottom:5px;">
+
+Funko Pop! ${product.name}
+
+</h3>
+
+
+<p style="font-size:14px; color:#555; background:#fff3cd; border:1px solid #ffeeba; padding:10px; border-radius:6px; margin-bottom:15px; font-weight:bold;">
+
+${product.popup.conditionNote}
+
+</p>
+
+
+<p style="font-size:15px; line-height:1.6; color:#444; margin-bottom:15px;">
+
+${product.popup.description}
+
+</p>
+
+
+<div style="font-size:14px; color:#555; background:#eee; padding:12px; border-radius:6px; margin-bottom:15px; line-height:1.6;">
+
+${details}
+
+<strong>• Box Condition:</strong> ${product.popup.boxCondition}
+
+</div>
+
+
+<p style="font-size:15px;text-align:center;font-weight:bold;">
+
+📩 
+
+<a href="${product.facebook}" target="_blank"
+style="color:#1877F2;text-decoration:none;border-bottom:1px dashed #1877F2;">
+
+Please PM/DM us if interested.
+
+</a>
+
+</p>
+
+
+</div>
+
+`;
+
+}
 
 function closeModal(id) {
 
