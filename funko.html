@@ -146,14 +146,51 @@ nav a:hover {
 }
 
 .status {
+
     display:inline-block;
-    background:#28a745;
+
     color:white;
+
     padding:6px 12px;
+
     border-radius:20px;
+
     font-size:12px;
+
     margin-bottom:10px;
+
 }
+
+
+.available-now {
+    background:#28a745;
+}
+
+
+.sold-out {
+    background:#dc3545;
+}
+
+
+.out-of-stock {
+    background:#6c757d;
+}
+
+
+.pre-order {
+    background:#fd7e14;
+}
+
+
+.stock-arriving {
+    background:#007bff;
+}
+
+
+.reserved {
+    background:#6f42c1;
+}
+
 
 .price {
     color:#ee4d2d;
@@ -667,9 +704,9 @@ ${product.name}
 
 
 
-<div class="status">
+<div class="status ${product.status.replaceAll(" ", "-").toLowerCase()}">
 
-${product.status}
+    ${product.status}
 
 </div>
 
@@ -689,10 +726,9 @@ FB Direct Buy ${product.directBuy}
 
 </div>
 
-
-
 <div class="buttons">
 
+${product.status === "AVAILABLE NOW" ? `
 
 <a class="shopee"
 
@@ -726,6 +762,15 @@ target="_blank">
 
 </a>
 
+` : `
+
+<div style="padding:12px; background:#dc3545; color:white; border-radius:6px; font-weight:bold;">
+
+❌ ${product.status}
+
+</div>
+
+`}
 
 </div>
 

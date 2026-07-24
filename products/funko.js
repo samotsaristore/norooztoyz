@@ -1,3 +1,11 @@
+// STATUS OPTIONS:
+// AVAILABLE NOW
+// OUT OF STOCK
+// SOLD OUT
+// PRE ORDER
+// STOCK ARRIVING
+// RESERVED
+
 const funkoProducts = [
 
     {
@@ -34,7 +42,7 @@ const funkoProducts = [
         image: "images/wolverine.jpg",
         price: "₱599",
         directBuy: "₱349",
-        status: "AVAILABLE NOW",
+        status: "SO",
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
