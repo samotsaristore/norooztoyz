@@ -42,7 +42,7 @@ const funkoProducts = [
         image: "images/wolverine.jpg",
         price: "₱599",
         directBuy: "₱349",
-        status: "SO",
+        status: "SOLD OUT",
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
