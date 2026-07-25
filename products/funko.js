@@ -76,7 +76,7 @@ const funkoProducts = [
     status: "SOLD OUT",
     shopee: "https://shopee.ph",
     lazada: "https://lazada.com.ph",
-    facebook: "https://m.me",
+    facebook: "https://www.facebook.com/share/r/1EeHvRnPyZ/",
     modal: "wolverine",
 
     popup: {

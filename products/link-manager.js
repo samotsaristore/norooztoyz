@@ -37,3 +37,46 @@ async function loadFunkoLinks() {
     }
 
 }
+
+window.hotwheelsLinks = {};
+
+async function loadHotWheelsLinks() {
+
+    try {
+
+        const response = await fetch("data/hotwheels_links.csv");
+
+        const csvText = await response.text();
+
+        const rows = csvText.split("\n");
+
+        rows.slice(1).forEach(row => {
+
+            const columns = row.split(",");
+
+            const id = columns[0]?.trim();
+
+            if(id){
+
+                hotwheelsLinks[id] = {
+
+                    shopee: columns[2]?.trim(),
+
+                    lazada: columns[3]?.trim()
+
+                };
+
+            }
+
+        });
+
+        console.log("Hot Wheels links loaded:", hotwheelsLinks);
+
+
+    } catch(error) {
+
+        console.error("Hot Wheels CSV loading error:", error);
+
+    }
+
+}
