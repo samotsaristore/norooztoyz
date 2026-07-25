@@ -133,3 +133,50 @@ async function loadAnimeLinks() {
     }
 
 }
+
+
+
+
+
+window.marvelLinks = {};
+
+async function loadMarvelLinks() {
+
+    try {
+
+        const response = await fetch("data/marvel_links.csv");
+
+        const csvText = await response.text();
+
+        const rows = csvText.split("\n");
+
+        rows.slice(1).forEach(row => {
+
+            const columns = row.split(",");
+
+            const id = columns[0]?.trim();
+
+            if(id){
+
+                marvelLinks[id] = {
+
+                    shopee: columns[2]?.trim(),
+
+                    lazada: columns[3]?.trim()
+
+                };
+
+            }
+
+        });
+
+        console.log("Marvel links loaded:", marvelLinks);
+
+
+    } catch(error) {
+
+        console.error("Marvel CSV loading error:", error);
+
+    }
+
+}
