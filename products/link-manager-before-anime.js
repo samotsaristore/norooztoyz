@@ -1,6 +1,4 @@
 console.log("link-manager.js loaded");
-
-
 window.funkoLinks = {};
 
 async function loadFunkoLinks() {
@@ -34,15 +32,11 @@ async function loadFunkoLinks() {
 
     } catch(error) {
 
-        console.error("Funko CSV loading error:", error);
+        console.error("CSV loading error:", error);
 
     }
 
 }
-
-
-
-
 
 window.hotwheelsLinks = {};
 
@@ -82,53 +76,6 @@ async function loadHotWheelsLinks() {
     } catch(error) {
 
         console.error("Hot Wheels CSV loading error:", error);
-
-    }
-
-}
-
-
-
-
-
-window.animeLinks = {};
-
-async function loadAnimeLinks() {
-
-    try {
-
-        const response = await fetch("data/anime_links.csv");
-
-        const csvText = await response.text();
-
-        const rows = csvText.split("\n");
-
-        rows.slice(1).forEach(row => {
-
-            const columns = row.split(",");
-
-            const id = columns[0]?.trim();
-
-            if(id){
-
-                animeLinks[id] = {
-
-                    shopee: columns[2]?.trim(),
-
-                    lazada: columns[3]?.trim()
-
-                };
-
-            }
-
-        });
-
-        console.log("Anime links loaded:", animeLinks);
-
-
-    } catch(error) {
-
-        console.error("Anime CSV loading error:", error);
 
     }
 
