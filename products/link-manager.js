@@ -305,3 +305,45 @@ async function loadAnikAnikLinks() {
     }
 
 }
+
+window.otherCollectiblesLinks = {};
+
+async function loadOtherCollectiblesLinks() {
+
+    try {
+
+        const response = await fetch("data/othercollectibles_links.csv");
+
+        const csvText = await response.text();
+
+        const rows = csvText.split("\n");
+
+        rows.slice(1).forEach(row => {
+
+            const columns = row.split(",");
+
+            const id = columns[0]?.trim();
+
+            if(id){
+
+                otherCollectiblesLinks[id] = {
+
+                    shopee: columns[2]?.trim(),
+
+                    lazada: columns[3]?.trim()
+
+                };
+
+            }
+
+        });
+
+        console.log("Other Collectibles links loaded:", otherCollectiblesLinks);
+
+    } catch(error) {
+
+        console.error("Other Collectibles CSV loading error:", error);
+
+    }
+
+}
