@@ -19,7 +19,6 @@ const funkoProducts = [
     lazada: "https://lazada.com.ph",
     facebook: "https://m.me",
     modal: "x23",
-    messengerRef: "x23",
 
     popup: {
         conditionNote: "⚠️ Please see video clip for the price & condition.",
