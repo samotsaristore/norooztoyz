@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Electronics Collection | Norooz Toyz</title>
+<title>DC Collection | Norooz Toyz</title>
 
 <style>
 
@@ -281,7 +281,7 @@ footer {
 
 <a href="index.html">Home</a>
 <a href="shop.html">Shop</a>
-<a href="electronics.html">Electronics</a>
+<a href="dc.html">DC</a>
 
 </nav>
 
@@ -292,7 +292,7 @@ footer {
 
 <div class="search-box">
 
-🔍 Search Electronics Collection
+🔍 Search DC Collection
 
 </div>
 
@@ -301,9 +301,9 @@ footer {
 
 <section class="hero">
 
-<h1>Electronics Collection</h1>
+<h1>DC Collection</h1>
 
-<p>Browse our available electronics.</p>
+<p>Browse our available DC collectibles.</p>
 
 </section>
 
@@ -312,12 +312,12 @@ footer {
 
 <h2 class="section-title">
 
-Featured Electronics
+Featured DC Figures
 
 </h2>
 
 
-<div class="product-grid" id="electronics-container">
+<div class="product-grid" id="dc-container">
 
 </div>
 
@@ -331,20 +331,20 @@ Featured Electronics
 </footer>
 
 
-<script src="products/electronics.js"></script>
+<script src="products/dc.js"></script>
 
 <script src="products/link-manager.js"></script>
 
 <script>
 
-function loadElectronicsProducts() {
+function loadDCProducts() {
 
-const container = document.getElementById("electronics-container");
+const container = document.getElementById("dc-container");
 
 
-electronicsProducts.forEach(product => {
+dcProducts.forEach(product => {
 
-let links = electronicsLinks[product.id] || {};
+let links = dcLinks[product.id] || {};
 
 let clickFunction = "";
 
@@ -451,9 +451,9 @@ target="_blank">
 
 
 
-loadElectronicsLinks().then(() => {
+loadDCLinks().then(() => {
 
-    loadElectronicsProducts();
+    loadDCProducts();
 
 });
 
@@ -464,7 +464,7 @@ loadElectronicsLinks().then(() => {
 function openDynamicPopup(id) {
 
 
-let product = electronicsProducts.find(item => item.id === id);
+let product = dcProducts.find(item => item.id === id);
 
 
 if(!product) return;

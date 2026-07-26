@@ -181,13 +181,13 @@ async function loadMarvelLinks() {
 
 }
 
-window.dcLinks = {};
+window.electronicsLinks = {};
 
-async function loadDCLinks() {
+async function loadElectronicsLinks() {
 
     try {
 
-        const response = await fetch("data/dc_links.csv");
+        const response = await fetch("data/electronics_links.csv");
 
         const csvText = await response.text();
 
@@ -201,7 +201,7 @@ async function loadDCLinks() {
 
             if(id){
 
-                dcLinks[id] = {
+                electronicsLinks[id] = {
 
                     shopee: columns[2]?.trim(),
 
@@ -213,11 +213,52 @@ async function loadDCLinks() {
 
         });
 
-        console.log("DC links loaded:", dcLinks);
+        console.log("Electronics links loaded:", electronicsLinks);
 
     } catch(error) {
 
-        console.error("DC CSV loading error:", error);
+        console.error("Electronics CSV loading error:", error);
+
+    }
+
+}
+window.electronicsLinks = {};
+
+async function loadElectronicsLinks() {
+
+    try {
+
+        const response = await fetch("data/electronics_links.csv");
+
+        const csvText = await response.text();
+
+        const rows = csvText.split("\n");
+
+        rows.slice(1).forEach(row => {
+
+            const columns = row.split(",");
+
+            const id = columns[0]?.trim();
+
+            if(id){
+
+                electronicsLinks[id] = {
+
+                    shopee: columns[2]?.trim(),
+
+                    lazada: columns[3]?.trim()
+
+                };
+
+            }
+
+        });
+
+        console.log("Electronics links loaded:", electronicsLinks);
+
+    } catch(error) {
+
+        console.error("Electronics CSV loading error:", error);
 
     }
 
