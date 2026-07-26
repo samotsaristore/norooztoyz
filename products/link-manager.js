@@ -265,47 +265,7 @@ async function loadElectronicsLinks() {
     }
 
 }
-window.anikAnikLinks = {};
 
-async function loadAnikAnikLinks() {
-
-    try {
-
-        const response = await fetch("data/anik-anik_links.csv");
-
-        const csvText = await response.text();
-
-        const rows = csvText.split("\n");
-
-        rows.slice(1).forEach(row => {
-
-            const columns = row.split(",");
-
-            const id = columns[0]?.trim();
-
-            if(id){
-
-                anikAnikLinks[id] = {
-
-                    shopee: columns[2]?.trim(),
-
-                    lazada: columns[3]?.trim()
-
-                };
-
-            }
-
-        });
-
-        console.log("Anik-Anik links loaded:", anikAnikLinks);
-
-    } catch(error) {
-
-        console.error("Anik-Anik CSV loading error:", error);
-
-    }
-
-}
 
 window.anikAnikLinks = {};
 

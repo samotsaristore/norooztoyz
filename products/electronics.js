@@ -10,28 +10,28 @@
 const electronicsProducts = [
 
     {
-        id: "falcon",
-        name: "Falcon",
-        image: "images/electronics/falcon.jpg",
-        price: "₱1,399",
-        directBuy: "₱750",
+        id: "electronics001",
+        name: "Coming Soon",
+        image: "images/electronics/coming-soon1.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "falcon",
+        modal: "electronics001",
 
         popup: {
 
             conditionNote: "⚠️ Please see video clip for the price & condition.",
 
-            description: "DC collectible figure featuring detailed design and character styling. Great addition for DC fans and display purposes.",
+            description: "Electronics collectible item featuring detailed design and functionality. Great addition for electronics fans and display purposes.",
 
             details: [
-                "DC collectible figure",
-                "Character figure design",
+                "Electronics collectible item",
+                "Detailed design",
                 "Great for display and collection"
             ],
 
@@ -44,10 +44,10 @@ const electronicsProducts = [
 
     {
         id: "electronics002",
-        name: "DC Figure Sample 2",
-        image: "images/electronics/sample2.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/electronics/coming-soon2.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
@@ -60,12 +60,12 @@ const electronicsProducts = [
 
             conditionNote: "⚠️ Please see video clip for the price & condition.",
 
-            description: "DC figure collectible with detailed sculpt and design made for fans and collectors.",
+            description: "Electronics collectible item with detailed design and functionality made for fans and collectors.",
 
             details: [
-                "DC collectible figure",
-                "Detailed character sculpt",
-                "Perfect for DC fans"
+                "Electronics collectible item",
+                "Detailed design",
+                "Perfect for electronics fans"
             ],
 
             boxCondition: "Box condition 9/10"
@@ -77,10 +77,10 @@ const electronicsProducts = [
 
     {
         id: "electronics003",
-        name: "Electronics Sample 3",
-        image: "images/electronics/sample3.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/electronics/coming-soon3.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
@@ -93,10 +93,10 @@ const electronicsProducts = [
 
             conditionNote: "⚠️ Please see video clip for the price & condition.",
 
-            description: "A collectible DC figure designed for fans who enjoy character displays and DC collections.",
+            description: "A collectible electronics item designed for fans who enjoy character displays and electronics collections.",
 
             details: [
-                "DC collectible figure",
+                "Electronics collectible item",
                 "Display collectible item",
                 "Great addition to collection"
             ],

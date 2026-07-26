@@ -37,10 +37,10 @@ const hotwheelsProducts = [
 
     {
         id: "hw002",
-        name: "Hot Wheels Sample 2",
-        image: "images/hotwheels/sample2.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/hotwheels/coming-soon2.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
@@ -64,10 +64,10 @@ const hotwheelsProducts = [
 
     {
         id: "hw003",
-        name: "Hot Wheels Sample 3",
-        image: "images/hotwheels/sample3.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/hotwheels/coming-soon3.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
@@ -91,10 +91,10 @@ const hotwheelsProducts = [
 
     {
         id: "hw004",
-        name: "Hot Wheels New Item Name",
-        image: "images/hotwheels/58_chevy_impala.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/hotwheels/coming-soon4.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",

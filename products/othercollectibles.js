@@ -10,18 +10,18 @@
 const otherCollectiblesProducts = [
 
     {
-        id: "falcon",
-        name: "Falcon",
-        image: "images/othercollectibles/falcon.jpg",
-        price: "₱1,399",
-        directBuy: "₱750",
+        id: "othercollectibles001",
+        name: "Coming Soon",
+        image: "images/othercollectibles/coming-soon1.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "falcon",
+        modal: "othercollectibles001",
 
         popup: {
 
@@ -44,10 +44,10 @@ const otherCollectiblesProducts = [
 
     {
         id: "othercollectibles002",
-        name: "DC Figure Sample 2",
-        image: "images/othercollectibles/sample2.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/othercollectibles/coming-soon2.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
@@ -77,10 +77,10 @@ const otherCollectiblesProducts = [
 
     {
         id: "othercollectibles003",
-        name: "Other Collectibles Sample 3",
-        image: "images/othercollectibles/sample3.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/othercollectibles/coming-soon3.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
@@ -93,10 +93,10 @@ const otherCollectiblesProducts = [
 
             conditionNote: "⚠️ Please see video clip for the price & condition.",
 
-            description: "A collectible DC figure designed for fans who enjoy character displays and DC collections.",
+            description: "Other collectible figures designed for fans who enjoy character displays and other collections.",
 
             details: [
-                "DC collectible figure",
+                "Other Collectible Figure",
                 "Display collectible item",
                 "Great addition to collection"
             ],

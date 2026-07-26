@@ -10,18 +10,18 @@
 const dcProducts = [
 
     {
-        id: "falcon",
-        name: "Falcon",
-        image: "images/dc/falcon.jpg",
-        price: "₱1,399",
-        directBuy: "₱750",
+        id: "coming-soon1",
+        name: "Coming Soon",
+        image: "images/dc/coming-soon1.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "falcon",
+        modal: "coming-soon1",
 
         popup: {
 
@@ -43,18 +43,18 @@ const dcProducts = [
 
 
     {
-        id: "dc002",
-        name: "DC Figure Sample 2",
-        image: "images/dc/sample2.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        id: "coming-soon2",
+        name: "Coming Soon",
+        image: "images/dc/coming-soon2.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "dc002",
+        modal: "coming-soon2",
 
         popup: {
 
@@ -76,18 +76,18 @@ const dcProducts = [
 
 
     {
-        id: "dc003",
-        name: "DC Figure Sample 3",
-        image: "images/dc/sample3.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        id: "coming-soon3",
+        name: "Coming Soon",
+        image: "images/dc/coming-soon3.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "dc003",
+        modal: "coming-soon3",
 
         popup: {
 

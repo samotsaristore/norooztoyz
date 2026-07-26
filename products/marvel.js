@@ -10,18 +10,18 @@
 const marvelProducts = [
 
     {
-        id: "falcon",
-        name: "Falcon",
-        image: "images/marvel/falcon.jpg",
-        price: "₱1,399",
-        directBuy: "₱750",
+        id: "coming-soon1",
+        name: "Coming Soon",
+        image: "images/marvel/coming-soon1.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "falcon",
+        modal: "coming-soon1",
 
         popup: {
 
@@ -43,18 +43,18 @@ const marvelProducts = [
 
 
     {
-        id: "marvel002",
-        name: "Marvel Figure Sample 2",
-        image: "images/marvel/sample2.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        id: "coming-soon2",
+        name: "Coming Soon",
+        image: "images/marvel/coming-soon2.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "marvel002",
+        modal: "coming-soon2",
 
         popup: {
 
@@ -76,18 +76,18 @@ const marvelProducts = [
 
 
     {
-        id: "marvel003",
-        name: "Marvel Figure Sample 3",
-        image: "images/marvel/sample3.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        id: "coming-soon3",
+        name: "Coming Soon",
+        image: "images/marvel/coming-soon3.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "marvel003",
+        modal: "coming-soon3",
 
         popup: {
 

@@ -10,18 +10,18 @@
 const animeProducts = [
 
     {
-        id: "lupinmedicom",
-        name: "Lupin Medicom",
-        image: "images/anime/lupinmedicom.jpg",
-        price: "₱4,499",
-        directBuy: "₱2,500",
+        id: "anime001",
+        name: "Coming Soon",
+        image: "images/anime/coming-soon1.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
         lazada: "https://lazada.com.ph",
         facebook: "https://m.me",
 
-        modal: "lupinmedicom",
+        modal: "anime001",
 
         popup: {
 
@@ -44,10 +44,10 @@ const animeProducts = [
 
     {
         id: "anime002",
-        name: "Anime Figure Sample 2",
-        image: "images/anime/sample2.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/anime/coming-soon2.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
@@ -77,10 +77,10 @@ const animeProducts = [
 
     {
         id: "anime003",
-        name: "Anime Figure Sample 3",
-        image: "images/anime/sample3.jpg",
-        price: "₱599",
-        directBuy: "₱349",
+        name: "Coming Soon",
+        image: "images/anime/coming-soon3.jpg",
+        price: "₱0",
+        directBuy: "₱0",
         status: "AVAILABLE NOW",
 
         shopee: "https://shopee.ph",
