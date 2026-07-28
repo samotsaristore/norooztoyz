@@ -181,6 +181,49 @@ async function loadMarvelLinks() {
 
 }
 
+window.dcLinks = {};
+
+async function loadDCLinks() {
+
+    try {
+
+        const response = await fetch("data/dc_links.csv");
+
+        const csvText = await response.text();
+
+        const rows = csvText.split("\n");
+
+        rows.slice(1).forEach(row => {
+
+            const columns = row.split(",");
+
+            const id = columns[0]?.trim();
+
+            if(id){
+
+                dcLinks[id] = {
+
+                    shopee: columns[2]?.trim(),
+
+                    lazada: columns[3]?.trim()
+
+                };
+
+            }
+
+        });
+
+        console.log("DC links loaded:", dcLinks);
+
+    } catch(error) {
+
+        console.error("DC CSV loading error:", error);
+
+    }
+
+}
+
+
 window.electronicsLinks = {};
 
 async function loadElectronicsLinks() {
@@ -222,13 +265,15 @@ async function loadElectronicsLinks() {
     }
 
 }
-window.electronicsLinks = {};
 
-async function loadElectronicsLinks() {
+
+window.anikAnikLinks = {};
+
+async function loadAnikAnikLinks() {
 
     try {
 
-        const response = await fetch("data/electronics_links.csv");
+        const response = await fetch("data/anik-anik_links.csv");
 
         const csvText = await response.text();
 
@@ -242,7 +287,7 @@ async function loadElectronicsLinks() {
 
             if(id){
 
-                electronicsLinks[id] = {
+                anikAnikLinks[id] = {
 
                     shopee: columns[2]?.trim(),
 
@@ -254,11 +299,53 @@ async function loadElectronicsLinks() {
 
         });
 
-        console.log("Electronics links loaded:", electronicsLinks);
+        console.log("Anik-Anik links loaded:", anikAnikLinks);
 
     } catch(error) {
 
-        console.error("Electronics CSV loading error:", error);
+        console.error("Anik-Anik CSV loading error:", error);
+
+    }
+
+}
+
+window.otherCollectiblesLinks = {};
+
+async function loadOtherCollectiblesLinks() {
+
+    try {
+
+        const response = await fetch("data/othercollectibles_links.csv");
+
+        const csvText = await response.text();
+
+        const rows = csvText.split("\n");
+
+        rows.slice(1).forEach(row => {
+
+            const columns = row.split(",");
+
+            const id = columns[0]?.trim();
+
+            if(id){
+
+                otherCollectiblesLinks[id] = {
+
+                    shopee: columns[2]?.trim(),
+
+                    lazada: columns[3]?.trim()
+
+                };
+
+            }
+
+        });
+
+        console.log("Other Collectibles links loaded:", otherCollectiblesLinks);
+
+    } catch(error) {
+
+        console.error("Other Collectibles CSV loading error:", error);
 
     }
 

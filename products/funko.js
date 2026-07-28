@@ -17,7 +17,7 @@ const funkoProducts = [
     status: "AVAILABLE NOW",
     shopee: "https://shopee.ph",
     lazada: "https://lazada.com.ph",
-    facebook: "https://m.me",
+    facebook: "https://www.facebook.com/share/r/1LS9YRadUz/",
     modal: "x23",
     messengerRef: "x23",
 
