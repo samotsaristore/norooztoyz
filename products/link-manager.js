@@ -9,7 +9,8 @@ const CATEGORIES = {
     dc: "dc_links.csv",
     electronics: "electronics_links.csv",
     anikAnik: "anik-anik_links.csv",
-    otherCollectibles: "othercollectibles_links.csv"
+    otherCollectibles: "othercollectibles_links.csv",
+    grandista: "grandista_links.csv"
 };
 
 // 2. Initialize empty objects on the window object dynamically
@@ -66,3 +67,4 @@ window.loadDCLinks = () => loadLinksForCategory('dc');
 window.loadElectronicsLinks = () => loadLinksForCategory('electronics');
 window.loadAnikAnikLinks = () => loadLinksForCategory('anikAnik');
 window.loadOtherCollectiblesLinks = () => loadLinksForCategory('othercollectibles');
+window.loadGrandistaLinks = () => loadLinksForCategory('grandista');
