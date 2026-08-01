@@ -46,7 +46,8 @@ async function loadLinksForCategory(categoryKey) {
             if (id) {
                 window[`${categoryKey}Links`][id] = {
                     shopee: columns[2]?.trim() || "",
-                    lazada: columns[3]?.trim() || ""
+                    lazada: columns[3]?.trim() || "",
+                    facebook: columns[4]?.trim() || ""
                 };
             }
         });

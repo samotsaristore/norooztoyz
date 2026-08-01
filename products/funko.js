@@ -17,7 +17,6 @@ const funkoProducts = [
     status: "AVAILABLE NOW",
     shopee: "https://shopee.ph",
     lazada: "https://lazada.com.ph",
-    facebook: "https://www.facebook.com/share/r/1LS9YRadUz/",
     modal: "x23",
     messengerRef: "x23",
 
@@ -48,7 +47,6 @@ const funkoProducts = [
     status: "AVAILABLE NOW",
     shopee: "https://shopee.ph",
     lazada: "https://lazada.com.ph",
-    facebook: "https://www.facebook.com/reel/1377294564245331",
     modal: "logan",
 
     popup: {
@@ -77,7 +75,6 @@ const funkoProducts = [
     status: "SOLD OUT",
     shopee: "https://shopee.ph",
     lazada: "https://lazada.com.ph",
-    facebook: "https://www.facebook.com/share/r/1EeHvRnPyZ/",
     modal: "wolverine",
 
     popup: {
@@ -105,8 +102,6 @@ const funkoProducts = [
     status: "AVAILABLE NOW",
     shopee: "https://shopee.ph",
     lazada: "https://lazada.com.ph",
-    facebook: "https://www.facebook.com/reel/1662262068199739",
-    <!-- facebook: "https://m.me", -->
     modal: "dracula",
 
     popup: {
@@ -135,7 +130,7 @@ const funkoProducts = [
     shopee: "https://shopee.ph",
     lazada: "https://lazada.com.ph",
     <!-- facebook: "https://m.me", -->
-    facebook: "https://www.facebook.com/share/r/1D4WXhm8Ew/",
+    <!-- facebook: "https://www.facebook.com/share/r/1D4WXhm8Ew/", -->
     modal: "freddie",
 
     popup: {
