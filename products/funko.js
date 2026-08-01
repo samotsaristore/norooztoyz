@@ -11,7 +11,7 @@ const funkoProducts = [
     {
     id: "x23",
     name: "X-23",
-    image: "images/x23.jpg",
+    image: "images/funko/x23.jpg",
     price: "₱599",
     directBuy: "₱349",
     status: "AVAILABLE NOW",
@@ -41,7 +41,7 @@ const funkoProducts = [
     {
     id: "logan",
     name: "Old Man Logan",
-    image: "images/oldmanlogan.jpg",
+    image: "images/funko/oldmanlogan.jpg",
     price: "₱599",
     directBuy: "₱349",
     status: "AVAILABLE NOW",
@@ -69,7 +69,7 @@ const funkoProducts = [
     {
     id: "wolverine",
     name: "Wolverine",
-    image: "images/wolverine.jpg",
+    image: "images/funko/wolverine.jpg",
     price: "₱599",
     directBuy: "₱349",
     status: "SOLD OUT",
@@ -96,7 +96,7 @@ const funkoProducts = [
     {
     id: "dracula",
     name: "Dracula",
-    image: "images/dracula.jpg",
+    image: "images/funko/dracula.jpg",
     price: "₱599",
     directBuy: "₱349",
     status: "AVAILABLE NOW",
@@ -123,7 +123,7 @@ const funkoProducts = [
     {
     id: "freddie",
     name: "Freddie Mercury",
-    image: "images/freddie.jpg",
+    image: "images/funko/freddie.jpg",
     price: "₱599",
     directBuy: "₱349",
     status: "AVAILABLE NOW",
@@ -146,6 +146,194 @@ const funkoProducts = [
 
         boxCondition: "9/10"
     }
+},
+
+
+{
+    id: "spiderman2099",
+    name: "Spiderman 2099",
+    image: "images/funko/spiderman2099.jpg",
+    price: "₱409",
+    directBuy: "₱220",
+    status: "AVAILABLE NOW",
+    shopee: "https://shopee.ph",
+    lazada: "https://lazada.com.ph",
+    <!-- facebook: "https://m.me", -->
+    <!-- facebook: "https://www.facebook.com/share/r/1D4WXhm8Ew/", -->
+    modal: "spiderman2099",
+
+    popup: {
+        conditionNote: "⚠️ Please see video clip for the price & condition.",
+
+        description: "Spiderman 2099 is a futuristic version of the beloved hero, featuring a sleek design and unique abilities.",
+
+        details: [
+            "Funko Pop collectible",
+            "2099 version of Spiderman",
+            "Great addition for sci-fi and comic collectors"
+        ],
+
+        boxCondition: "9/10"
+    }
+},
+
+
+{
+    id: "harley",
+    name: "Harley Quinn",
+    image: "images/funko/harley.jpg",
+    price: "₱599",
+    directBuy: "₱349",
+    status: "AVAILABLE NOW",
+    shopee: "https://shopee.ph",
+    lazada: "https://lazada.com.ph",
+    modal: "harley",
+
+    popup: {
+        conditionNote: "⚠️ Please see video clip for the price & condition.",
+
+        description: "Harley Quinn is a fan-favorite DC character, known for her chaotic personality and iconic status as the Joker's sidekick.",
+
+        details: [
+            "Funko Pop collectible",
+            "Iconic DC character design",
+            "Great addition for superhero and comic collectors"
+        ],
+
+        boxCondition: "9/10"
+    }
+},
+
+
+{
+    id: "penguin",
+    name: "The Penguin",
+    image: "images/funko/penguin.jpg",
+    price: "₱599",
+    directBuy: "₱349",
+    status: "AVAILABLE NOW",
+    shopee: "https://shopee.ph",
+    lazada: "https://lazada.com.ph",
+    modal: "penguin",
+
+    popup: {
+        conditionNote: "⚠️ Please see video clip for the price & condition.",
+
+        description: "The Penguin is a fan-favorite DC character, known for his cunning intellect and iconic status as the Joker's rival.",
+
+        details: [
+            "Funko Pop collectible",
+            "Iconic DC character design",
+            "Great addition for superhero and comic collectors"
+        ],
+
+        boxCondition: "9/10"
+    }
+},
+
+{
+    id: "chernabog",
+    name: "Chernabog",
+    image: "images/funko/chernabog.jpg",
+    price: "₱599",
+    directBuy: "₱349",
+    status: "AVAILABLE NOW",
+    shopee: "https://shopee.ph",
+    lazada: "https://lazada.com.ph",
+    modal: "chernabog",
+
+    popup: {
+        conditionNote: "⚠️ Please see video clip for the price & condition.",
+
+        description: "Chernabog is a fan-favorite character from the animated film Fantasia, known for his menacing presence and iconic design.",
+
+        details: [
+            "Funko Pop collectible",
+            "Iconic Disney character design",
+            "Great addition for Disney collectors"
+        ],
+
+        boxCondition: "9/10"
+    }
+},
+
+{
+    id: "cratchit",
+    name: "Mrs. Cratchit",
+    image: "images/funko/cratchit.jpg",
+    price: "₱599",
+    directBuy: "₱349",
+    status: "AVAILABLE NOW",
+    shopee: "https://shopee.ph",
+    lazada: "https://lazada.com.ph",
+    modal: "cratchit",
+
+    popup: {
+        conditionNote: "⚠️ Please see video clip for the price & condition.",
+
+        description: "Mrs. Cratchit is a beloved character from Charles Dickens' 'A Christmas Carol', known for her kindness and dedication to her family.",
+
+        details: [
+            "Funko Pop collectible",
+            "Iconic Disney character design",
+            "Great addition for Disney collectors"
+        ],
+
+        boxCondition: "9/10"
+    }
+},
+
+{
+    id: "blackmanta",
+    name: "Black Manta",
+    image: "images/funko/blackmanta.jpg",
+    price: "₱599",
+    directBuy: "₱349",
+    status: "AVAILABLE NOW",
+    shopee: "https://shopee.ph",
+    lazada: "https://lazada.com.ph",
+    modal: "blackmanta",
+
+    popup: {
+        conditionNote: "⚠️ Please see video clip for the price & condition.",
+
+        description: "Black Manta is a fan-favorite DC character, known for his cunning intellect and iconic status as the Joker's rival.",
+
+        details: [
+            "Funko Pop collectible",
+            "Iconic DC character design",
+            "Great addition for superhero and comic collectors"
+        ],
+
+        boxCondition: "9/10"
+    }
+},
+
+{
+    id: "school",
+    name: "Schoolhouse Rock",
+    image: "images/funko/school.jpg",
+    price: "₱1,099",
+    directBuy: "₱549",
+    status: "AVAILABLE NOW",
+    shopee: "https://shopee.ph",
+    lazada: "https://lazada.com.ph",
+    modal: "school",
+
+    popup: {
+        conditionNote: "⚠️ Please see video clip for the price & condition.",
+
+        description: "Schoolhouse Rock is a fan-favorite educational series, known for its catchy songs and engaging animations.",
+
+        details: [
+            "Funko Pop collectible",
+            "Iconic Schoolhouse Rock character design",
+            "Great addition for educational and nostalgic collectors"
+        ],
+
+        boxCondition: "9/10"
+    }
 }
+
 
 ];
