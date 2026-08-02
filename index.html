@@ -20,6 +20,7 @@ body{
     color:white;
 }
 
+/* HEADER GINAWANG STICKY GAYA NG HYPEBEAST PERO ORIGINAL NA KULAY */
 header{
     background:#3B5674;
     padding:10px 20px;
@@ -27,6 +28,9 @@ header{
     justify-content:space-between;
     align-items:center;
     border-bottom:3px solid orange;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo{
@@ -44,15 +48,41 @@ header{
     object-fit:contain;
 }
 
+/* DESKTOP MENU LAYOUT */
+nav{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
     transition:.3s;
+    white-space:nowrap;
 }
 
 nav a:hover{
     color:orange;
+}
+
+/* HAMBURGER BUTTON (Nakatago sa Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
 }
 
 .hero{
@@ -92,114 +122,110 @@ footer{
 
 
 /* ABOUT */
-
 #about{
-
-padding:80px 40px;
-
-background:#45627F;
-
-text-align:center;
-
+    padding:80px 40px;
+    background:#45627F;
+    text-align:center;
 }
 
 #about h2{
-
-font-size:42px;
-
-color:orange;
-
-margin-bottom:30px;
-
+    font-size:42px;
+    color:orange;
+    margin-bottom:30px;
 }
 
 #about p{
-
-max-width:900px;
-
-margin:20px auto;
-
-font-size:20px;
-
-line-height:1.8;
-
+    max-width:900px;
+    margin:20px auto;
+    font-size:20px;
+    line-height:1.8;
 }
 
 
-/* MOBILE */
-
-@media (max-width:768px){
+/* HYPEBEAST-STYLE MOBILE MENU LAYOUT */
+@media (max-width:992px){
 
 header{
-
-flex-direction:column;
-
-padding:10px;
-
+    padding:15px 20px;
 }
 
-.logo{
-
-flex-direction:column;
-
-text-align:center;
-
+/* Lalabas ang Hamburger Button sa Mobile */
+.menu-toggle {
+    display: flex; 
 }
 
-.logo img{
-
-width:55px !important;
-
-height:55px !important;
-
-}
-
+/* Itatago ang orihinal na nakalatag na menu; magiging Dropdown Menu */
 nav{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background:#3B5674; /* Orixinal na kulay */
+    padding: 10px 0;
+    gap: 0;
+    border-bottom: 3px solid orange;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
 
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-margin-top:15px;
-
+/* Aktibo kapag pinindot ang ☰ button */
+nav.active {
+    display: flex;
 }
 
 nav a{
+    width: 100%;
+    text-align: left;
+    padding: 15px 25px; /* Malaking touch area para sa mobile browsing */
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
 
-margin:6px 8px;
+nav a:last-child {
+    border-bottom: none;
+}
 
-font-size:16px;
+/* Animasyon para maging X ang Hamburger Icon kapag bukas */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
 
+.logo{
+    flex-direction: row; /* Pinanatiling horizontal para sa malinis na header link */
+    text-align: left;
+}
+
+.logo img{
+    width:55px !important;
+    height:55px !important;
 }
 
 .hero{
-
-padding:40px 20px;
-
+    padding:40px 20px;
 }
 
 .hero h1{
-
-font-size:30px;
-
-line-height:1.2;
-
+    font-size:30px;
+    line-height:1.2;
 }
 
 .hero p{
-
-font-size:18px;
-
+    font-size:18px;
 }
 
 .button{
-
-width:260px;
-
-text-align:center;
-
+    display: block;
+    width:100%;
+    max-width:260px;
+    margin: 40px auto 0 auto;
+    text-align:center;
 }
 
 }
@@ -215,58 +241,56 @@ text-align:center;
 <header>
 
 <div class="logo">
-
-<img src="images/norooztoyzlogo.png" alt="Norooz Toyz Logo">
-
-<span>NOROOZ TOYZ</span>
-
+    <img src="images/norooztoyzlogo.png" alt="Norooz Toyz Logo">
+    <span>NOROOZ TOYZ</span>
 </div>
 
+<!-- HAMBURGER MENU BUTTON -->
+<button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
-<nav>
-
-<a href="#">Home</a>
-
-<a href="shop.html">Shop</a>
-
-<a href="about.html">About</a>
-
-<a href="contact.html">Contact</a>
-
-<a href="https://shopee.ph/samotsari.store" target="_blank">🛒 Shopee</a>
-
-<a href="https://www.lazada.com.ph/shop/samotsaristore" target="_blank">🛍️ Lazada</a>
-
-<a href="https://www.facebook.com/norooz.toyz" target="_blank">📘 Facebook</a>
-
+<!-- NAVIGATION LINKS -->
+<nav id="nav-menu">
+    <a href="#">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://shopee.ph" target="_blank">🛒 Shopee</a>
+    <a href="https://lazada.com.ph" target="_blank">🛍️ Lazada</a>
+    <a href="https://facebook.com" target="_blank">📘 Facebook</a>
 </nav>
-
 
 </header>
 
 
 
 <section class="hero">
-
-<h1>Welcome to Norooz Toyz</h1>
-
-<p>
-Your One-Stop Shop for Affordable Toys, Electronic Gadgets, Apparel, and More
-</p>
-
-<a class="button" href="#">COMING SOON</a>
-
+    <h1>Welcome to Norooz Toyz</h1>
+    <p>
+    Your One-Stop Shop for Affordable Toys, Electronic Gadgets, Apparel, and More
+    </p>
+    <a class="button" href="#">COMING SOON</a>
 </section>
 
 
 
 <footer>
-
-© 2026 Norooz Toyz
-
+    © 2026 Norooz Toyz
 </footer>
 
+<!-- SCRIPT PARA SA PAGBUKAS AT PAGSARA NG MENU -->
+<script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+</script>
 
 </body>
-
 </html>
