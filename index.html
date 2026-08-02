@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Norooz Toyz</title>
 
@@ -18,19 +18,17 @@
 body{
     background:#3B5674;
     color:white;
+    width: 100%;
+    overflow-x: hidden; /* Iniiwasan ang pag-zoom out ng browser */
 }
 
-/* HEADER GINAWANG STICKY GAYA NG HYPEBEAST PERO ORIGINAL NA KULAY */
 header{
     background:#3B5674;
-    padding:10px 20px;
+    padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     border-bottom:3px solid orange;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .logo{
@@ -48,7 +46,6 @@ header{
     object-fit:contain;
 }
 
-/* DESKTOP MENU LAYOUT */
 nav{
     display:flex;
     align-items:center;
@@ -66,28 +63,9 @@ nav a:hover{
     color:orange;
 }
 
-/* HAMBURGER BUTTON (Nakatago sa Desktop) */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: 0.3s;
-}
-
 .hero{
     text-align:center;
-    padding:20px;
+    padding:60px 20px;
 }
 
 .hero h1{
@@ -121,11 +99,12 @@ footer{
 }
 
 
-/* ABOUT */
+/* ABOUT - INAYOS ANG WIDTH PARA SA MOBILE SAFETY */
 #about{
-    padding:80px 40px;
+    padding:80px 20px;
     background:#45627F;
     text-align:center;
+    width: 100%;
 }
 
 #about h2{
@@ -135,84 +114,68 @@ footer{
 }
 
 #about p{
-    max-width:900px;
+    max-width:100%; /* Binago mula 900px para hindi mag-zoom out ang phone */
+    width: 900px;
     margin:20px auto;
     font-size:20px;
     line-height:1.8;
 }
 
 
-/* HYPEBEAST-STYLE MOBILE MENU LAYOUT */
-@media (max-width:992px){
+/* PINALAKING MOBILE LAYOUT (Para sa Cellphone) */
+@media (max-width: 992px){
 
 header{
-    padding:15px 20px;
-}
-
-/* Lalabas ang Hamburger Button sa Mobile */
-.menu-toggle {
-    display: flex; 
-}
-
-/* Itatago ang orihinal na nakalatag na menu; magiging Dropdown Menu */
-nav{
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background:#3B5674; /* Orixinal na kulay */
-    padding: 10px 0;
-    gap: 0;
-    border-bottom: 3px solid orange;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-}
-
-/* Aktibo kapag pinindot ang ☰ button */
-nav.active {
-    display: flex;
-}
-
-nav a{
-    width: 100%;
-    text-align: left;
-    padding: 15px 25px; /* Malaking touch area para sa mobile browsing */
-    font-size: 18px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-nav a:last-child {
-    border-bottom: none;
-}
-
-/* Animasyon para maging X ang Hamburger Icon kapag bukas */
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px);
-}
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-}
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
+    flex-direction:column;
+    padding:20px 10px;
 }
 
 .logo{
-    flex-direction: row; /* Pinanatiling horizontal para sa malinis na header link */
-    text-align: left;
+    flex-direction:column;
+    text-align:center;
+    margin-bottom:20px;
 }
 
 .logo img{
-    width:55px !important;
-    height:55px !important;
+    width:75px !important; /* Pinalaki ang logo sa mobile */
+    height:75px !important;
+}
+
+.logo span {
+    font-size: 24px; /* Pinalaki ang pangalan ng brand */
+    margin-top: 5px;
+}
+
+nav{
+    display:flex;
+    flex-direction: column; /* Ginawang pababa ang listahan para hindi siksikan */
+    gap:12px; /* Malaking espasyo sa pagitan ng bawat menu */
+    width:100%;
+    padding: 0 10px;
+}
+
+nav a{
+    font-size:20px; /* Mas malaking letra para madaling basahin */
+    padding:18px 20px; /* Malaking-malaking touch target para sa daliri mo */
+    background:rgba(255, 255, 255, 0.1); /* May background para mukhang malaking button */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius:8px;
+    display:block;
+    text-align:center;
+    width: 100%;
+}
+
+nav a:active{
+    background:orange;
+    color:black;
 }
 
 .hero{
-    padding:40px 20px;
+    padding:60px 15px;
 }
 
 .hero h1{
-    font-size:30px;
+    font-size:36px; /* Tamang laki ng headline sa phone */
     line-height:1.2;
 }
 
@@ -223,7 +186,9 @@ nav a:last-child {
 .button{
     display: block;
     width:100%;
-    max-width:260px;
+    max-width:280px;
+    padding: 18px; /* Pinalaki rin ang "Coming Soon" button */
+    font-size: 18px;
     margin: 40px auto 0 auto;
     text-align:center;
 }
@@ -245,15 +210,8 @@ nav a:last-child {
     <span>NOROOZ TOYZ</span>
 </div>
 
-<!-- HAMBURGER MENU BUTTON -->
-<button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
 
-<!-- NAVIGATION LINKS -->
-<nav id="nav-menu">
+<nav>
     <a href="#">Home</a>
     <a href="shop.html">Shop</a>
     <a href="about.html">About</a>
@@ -262,6 +220,7 @@ nav a:last-child {
     <a href="https://lazada.com.ph" target="_blank">🛍️ Lazada</a>
     <a href="https://facebook.com" target="_blank">📘 Facebook</a>
 </nav>
+
 
 </header>
 
@@ -281,16 +240,6 @@ nav a:last-child {
     © 2026 Norooz Toyz
 </footer>
 
-<!-- SCRIPT PARA SA PAGBUKAS AT PAGSARA NG MENU -->
-<script>
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const navMenu = document.getElementById('nav-menu');
-
-    menuBtn.addEventListener('click', () => {
-        menuBtn.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-</script>
 
 </body>
 </html>
