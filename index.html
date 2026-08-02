@@ -97,118 +97,91 @@ footer{
 }
 
 
-/* ABOUT */
-
+/* ABOUT SECTION */
 #about{
-
-padding:80px 40px;
-
-background:#45627F;
-
-text-align:center;
-
+    padding:80px 40px;
+    background:#45627F;
+    text-align:center;
 }
 
 #about h2{
-
-font-size:42px;
-
-color:orange;
-
-margin-bottom:30px;
-
+    font-size:42px;
+    color:orange;
+    margin-bottom:30px;
 }
 
 #about p{
-
-max-width:900px;
-
-margin:20px auto;
-
-font-size:20px;
-
-line-height:1.8;
-
+    max-width:900px;
+    margin:20px auto;
+    font-size:20px;
+    line-height:1.8;
 }
 
 
-/* MOBILE */
-
-@media (max-width:768px){
+/* SAFE RESPONSIVE DESIGN (Para sa Mobile at Tablet) */
+@media (max-width: 992px){
 
 header{
-
-flex-direction:column;
-
-padding:10px;
-
+    flex-direction:column;
+    padding:20px 15px;
 }
 
 .logo{
-
-flex-direction:column;
-
-text-align:center;
-
+    flex-direction:column;
+    text-align:center;
+    margin-bottom:20px;
 }
 
 .logo img{
-
-width:55px !important;
-
-height:55px !important;
-
+    width:65px !important;
+    height:65px !important;
 }
 
 nav{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-margin-top:15px;
-
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px; /* May tamang distansya ang bawat button */
+    width:100%;
 }
 
 nav a{
+    font-size:16px;
+    padding:12px 10px; 
+    background:rgba(255, 255, 255, 0.08); /* Minimalist button border/background para madaling mapindot */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius:6px;
+    display:inline-block;
+    text-align:center;
+    /* Hinahati sa dalawang column ang mga buttons para malalaki at hindi siksikan */
+    flex: 1 1 calc(50% - 10px); 
+    min-width: 130px;
+}
 
-font-size:18px;
-
-padding:10px 14px;
-
-margin:4px;
-
-display:inline-block;
+nav a:active{
+    background:orange;
+    color:black;
 }
 
 .hero{
-
-padding:40px 20px;
-
+    padding:60px 20px;
 }
 
 .hero h1{
-
-font-size:30px;
-
-line-height:1.2;
-
+    font-size:34px;
+    line-height:1.3;
 }
 
 .hero p{
-
-font-size:18px;
-
+    font-size:18px;
 }
 
 .button{
-
-width:260px;
-
-text-align:center;
-
+    display: block;
+    width:100%;
+    max-width:280px;
+    margin:40px auto 0 auto; /* Naka-center na sa mobile screen */
+    text-align:center;
 }
 
 }
@@ -224,30 +197,19 @@ text-align:center;
 <header>
 
 <div class="logo">
-
-<img src="images/norooztoyzlogo.png" alt="Norooz Toyz Logo">
-
-<span>NOROOZ TOYZ</span>
-
+    <img src="images/norooztoyzlogo.png" alt="Norooz Toyz Logo">
+    <span>NOROOZ TOYZ</span>
 </div>
 
 
 <nav>
-
-<a href="#">Home</a>
-
-<a href="shop.html">Shop</a>
-
-<a href="about.html">About</a>
-
-<a href="contact.html">Contact</a>
-
-<a href="https://shopee.ph/samotsari.store" target="_blank">🛒 Shopee</a>
-
-<a href="https://www.lazada.com.ph/shop/samotsaristore" target="_blank">🛍️ Lazada</a>
-
-<a href="https://www.facebook.com/norooz.toyz" target="_blank">📘 Facebook</a>
-
+    <a href="#">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://shopee.ph/samotsari.store" target="_blank">🛒 Shopee</a>
+    <a href="https://www.lazada.com.ph/shop/samotsaristore" target="_blank">🛍️ Lazada</a>
+    <a href="https://www.facebook.com/norooz.toyz" target="_blank">📘 Facebook</a>
 </nav>
 
 
@@ -256,26 +218,19 @@ text-align:center;
 
 
 <section class="hero">
-
-<h1>Welcome to Norooz Toyz</h1>
-
-<p>
-Your One-Stop Shop for Affordable Toys, Electronic Gadgets, Apparel, and More
-</p>
-
-<a class="button" href="#">COMING SOON</a>
-
+    <h1>Welcome to Norooz Toyz</h1>
+    <p>
+    Your One-Stop Shop for Affordable Toys, Electronic Gadgets, Apparel, and More
+    </p>
+    <a class="button" href="#">COMING SOON</a>
 </section>
 
 
 
 <footer>
-
-© 2026 Norooz Toyz
-
+    © 2026 Norooz Toyz
 </footer>
 
 
 </body>
-
 </html>
