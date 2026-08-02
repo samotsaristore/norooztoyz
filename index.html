@@ -67,7 +67,7 @@ nav a:hover{
     color:orange;
 }
 
-/* HAMBURGER TOGGLE BUTTON (Nakatago sa desktop) */
+/* HAMBURGER TOGGLE BUTTON */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -122,19 +122,40 @@ footer{
     border-top:1px solid #333;
 }
 
-/* MOBILE VIEW - KOPYANG-KOPYA SA HYPEBEAST BROWSING */
+/* ABOUT */
+#about{
+    padding:80px 20px;
+    background:#45627F;
+    text-align:center;
+    width: 100%;
+}
+
+#about h2{
+    font-size:42px;
+    color:orange;
+    margin-bottom:30px;
+}
+
+#about p{
+    max-width:100%;
+    width: 900px;
+    margin:20px auto;
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* HIGH-VISIBILITY MOBILE NAVIGATION (PINALAKI PARA SA PHONE) */
 @media (max-width: 992px){
 
     header{
-        padding: 15px 20px;
+        padding: 20px 20px;
     }
 
-    /* Lumabas na ang malaking hamburger icon */
     .menu-toggle {
         display: flex;
     }
 
-    /* Itatago ang menu, lalabas lang kapag pinindot ang ☰ */
+    /* Ginawang malaki ang dropdown menu para kainin ang screen kapag bukas */
     nav{
         display: none;
         flex-direction: column;
@@ -143,23 +164,23 @@ footer{
         left: 0;
         width: 100%;
         background:#3B5674;
-        padding: 15px 0;
-        gap: 0;
+        padding: 30px 0;
+        gap: 5px;
         border-bottom: 4px solid orange;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        min-height: 80vh; /* Kinakain ang 80% ng taas ng screen para lumaki ang mga links */
     }
 
-    /* Kakalat sa buong lapad ng mobile kapag active */
     nav.active {
         display: flex;
     }
 
-    /* NAPAKALAKING MENU LINKS PARA MADALING PINDUTIN SA PHONE */
+    /* NAPAKALAKING LINYA AT LETRA GAYA NG PROPESYONAL NA MOBILE VIEW */
     nav a{
         width: 100%;
         text-align: left;
-        padding: 22px 30px; /* Sobrang laki ng touch target para sa daliri mo */
-        font-size: 24px;    /* Pinalaking sukat ng letra */
+        padding: 35px 40px; /* Sobrang luwag para hindi magkamali ang daliri */
+        font-size: 32px;    /* Sobrang laking letra para kitang-kita agad */
         font-weight: bold;
         border-bottom: 1px solid rgba(255,255,255,0.1);
         display: block;
@@ -174,7 +195,7 @@ footer{
         color: orange;
     }
 
-    /* Animasyon kapag pinindot ang hamburger menu button (magiging 'X') */
+    /* Hamburger to X animation */
     .menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(6px, 7px);
     }
@@ -185,27 +206,26 @@ footer{
         transform: rotate(-45deg) translate(6px, -8px);
     }
 
-    /* HERO PINALAKI PARA MAGANDA TIGNAN SA CP */
     .hero{
-        padding: 100px 20px;
+        padding: 120px 20px;
     }
 
     .hero h1{
-        font-size: 42px; /* Mas malaki at litaw */
+        font-size: 46px;
         line-height: 1.2;
     }
 
     .hero p{
-        font-size: 20px;
-        margin-top: 15px;
+        font-size: 22px;
+        margin-top: 20px;
     }
 
     .button{
         display: block;
         width: 100%;
-        max-width: 300px;
-        padding: 20px;
-        font-size: 20px;
+        max-width: 320px;
+        padding: 22px;
+        font-size: 22px;
         margin: 50px auto 0 auto;
     }
 }
@@ -232,7 +252,7 @@ footer{
     <span></span>
 </button>
 
-<!-- NAVIGATION LINKS (Nakatago ngayon sa mobile, bubukas gamit ang script sa baba) -->
+<!-- NAVIGATION LINKS -->
 <nav id="nav-menu">
     <a href="#">Home</a>
     <a href="shop.html">Shop</a>
@@ -261,7 +281,7 @@ footer{
     © 2026 Norooz Toyz
 </footer>
 
-<!-- SCRIPT PARA GUMANA ANG OPEN/CLOSE MENU -->
+
 <script>
     const menuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
