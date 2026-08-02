@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Norooz Toyz</title>
 
@@ -18,20 +18,15 @@
 body{
     background:#3B5674;
     color:white;
-    width: 100%;
 }
 
-/* STICKY HEADER GAYA NG HYPEBEAST */
 header{
     background:#3B5674;
-    padding:15px 20px;
+    padding:10px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     border-bottom:3px solid orange;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .logo{
@@ -49,47 +44,20 @@ header{
     object-fit:contain;
 }
 
-/* DESKTOP NAV */
-nav{
-    display:flex;
-    align-items:center;
-    gap:18px;
-}
-
 nav a{
     color:white;
     text-decoration:none;
+    margin-left:25px;
     transition:.3s;
-    white-space:nowrap;
 }
 
 nav a:hover{
     color:orange;
 }
 
-/* HAMBURGER TOGGLE BUTTON */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-
 .hero{
     text-align:center;
-    padding:80px 20px;
+    padding:20px;
 }
 
 .hero h1{
@@ -122,112 +90,118 @@ footer{
     border-top:1px solid #333;
 }
 
+
 /* ABOUT */
+
 #about{
-    padding:80px 20px;
-    background:#45627F;
-    text-align:center;
-    width: 100%;
+
+padding:80px 40px;
+
+background:#45627F;
+
+text-align:center;
+
 }
 
 #about h2{
-    font-size:42px;
-    color:orange;
-    margin-bottom:30px;
+
+font-size:42px;
+
+color:orange;
+
+margin-bottom:30px;
+
 }
 
 #about p{
-    max-width:100%;
-    width: 900px;
-    margin:20px auto;
-    font-size:20px;
-    line-height:1.8;
+
+max-width:900px;
+
+margin:20px auto;
+
+font-size:20px;
+
+line-height:1.8;
+
 }
 
-/* HIGH-VISIBILITY MOBILE NAVIGATION (PINALAKI PARA SA PHONE) */
-@media (max-width: 992px){
 
-    header{
-        padding: 20px 20px;
-    }
+/* MOBILE */
 
-    .menu-toggle {
-        display: flex;
-    }
+@media (max-width:768px){
 
-    /* Ginawang malaki ang dropdown menu para kainin ang screen kapag bukas */
-    nav{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background:#3B5674;
-        padding: 30px 0;
-        gap: 5px;
-        border-bottom: 4px solid orange;
-        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-        min-height: 80vh; /* Kinakain ang 80% ng taas ng screen para lumaki ang mga links */
-    }
+header{
 
-    nav.active {
-        display: flex;
-    }
+flex-direction:column;
 
-    /* NAPAKALAKING LINYA AT LETRA GAYA NG PROPESYONAL NA MOBILE VIEW */
-    nav a{
-        width: 100%;
-        text-align: left;
-        padding: 35px 40px; /* Sobrang luwag para hindi magkamali ang daliri */
-        font-size: 32px;    /* Sobrang laking letra para kitang-kita agad */
-        font-weight: bold;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        display: block;
-    }
+padding:10px;
 
-    nav a:last-child {
-        border-bottom: none;
-    }
+}
 
-    nav a:active {
-        background: rgba(255,255,255,0.1);
-        color: orange;
-    }
+.logo{
 
-    /* Hamburger to X animation */
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 7px);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -8px);
-    }
+flex-direction:column;
 
-    .hero{
-        padding: 120px 20px;
-    }
+text-align:center;
 
-    .hero h1{
-        font-size: 46px;
-        line-height: 1.2;
-    }
+}
 
-    .hero p{
-        font-size: 22px;
-        margin-top: 20px;
-    }
+.logo img{
 
-    .button{
-        display: block;
-        width: 100%;
-        max-width: 320px;
-        padding: 22px;
-        font-size: 22px;
-        margin: 50px auto 0 auto;
-    }
+width:55px !important;
+
+height:55px !important;
+
+}
+
+nav{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+margin-top:15px;
+
+}
+
+nav a{
+
+margin:6px 8px;
+
+font-size:16px;
+
+}
+
+.hero{
+
+padding:40px 20px;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+line-height:1.2;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.button{
+
+width:260px;
+
+text-align:center;
+
+}
+
 }
 
 </style>
@@ -241,56 +215,58 @@ footer{
 <header>
 
 <div class="logo">
-    <img src="images/norooztoyzlogo.png" alt="Norooz Toyz Logo">
-    <span>NOROOZ TOYZ</span>
+
+<img src="images/norooztoyzlogo.png" alt="Norooz Toyz Logo">
+
+<span>NOROOZ TOYZ</span>
+
 </div>
 
-<!-- HAMBURGER MENU BUTTON -->
-<button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
 
-<!-- NAVIGATION LINKS -->
-<nav id="nav-menu">
-    <a href="#">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://shopee.ph" target="_blank">🛒 Shopee</a>
-    <a href="https://lazada.com.ph" target="_blank">🛍️ Lazada</a>
-    <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+<nav>
+
+<a href="#">Home</a>
+
+<a href="shop.html">Shop</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="https://shopee.ph/samotsari.store" target="_blank">🛒 Shopee</a>
+
+<a href="https://www.lazada.com.ph/shop/samotsaristore" target="_blank">🛍️ Lazada</a>
+
+<a href="https://www.facebook.com/norooz.toyz" target="_blank">📘 Facebook</a>
+
 </nav>
+
 
 </header>
 
 
 
 <section class="hero">
-    <h1>Welcome to Norooz Toyz</h1>
-    <p>
-    Your One-Stop Shop for Affordable Toys, Electronic Gadgets, Apparel, and More
-    </p>
-    <a class="button" href="#">COMING SOON</a>
+
+<h1>Welcome to Norooz Toyz</h1>
+
+<p>
+Your One-Stop Shop for Affordable Toys, Electronic Gadgets, Apparel, and More
+</p>
+
+<a class="button" href="#">COMING SOON</a>
+
 </section>
 
 
 
 <footer>
-    © 2026 Norooz Toyz
+
+© 2026 Norooz Toyz
+
 </footer>
 
 
-<script>
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const navMenu = document.getElementById('nav-menu');
-
-    menuBtn.addEventListener('click', () => {
-        menuBtn.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-</script>
-
 </body>
+
 </html>
