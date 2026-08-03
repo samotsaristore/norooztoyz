@@ -155,7 +155,7 @@ const funkoProducts = [
     image: "images/funko/spiderman2099.jpg",
     price: "₱409",
     directBuy: "₱220",
-    status: "AVAILABLE NOW",
+    status: "SOLD OUT",
     shopee: "https://shopee.ph",
     lazada: "https://lazada.com.ph",
     <!-- facebook: "https://m.me", -->
